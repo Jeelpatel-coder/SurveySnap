@@ -1,0 +1,147 @@
+.support-container {
+  padding: 4rem 2rem;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 200px);
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.support-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.support-content h1 {
+  color: #2C3E50;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.support-intro {
+  color: #6C757D;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.faq-section, .support-options {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2, .support-options h2 {
+  color: #3498DB;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #E9ECEF;
+  padding-bottom: 1.5rem;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-item h3 {
+  color: #2C3E50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.faq-item p {
+  color: #6C757D;
+  line-height: 1.6;
+}
+
+.support-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.support-card {
+  background-color: #F8F9FA;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.support-card:hover {
+  transform: translateY(-5px);
+}
+
+.support-card h3 {
+  color: #2C3E50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.support-card p {
+  color: #6C757D;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.support-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3498DB;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.support-btn:hover {
+  background-color: #2980B9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  color: lightgray;
+}
+
+@media (max-width: 768px) {
+  .support-container {
+    padding: 2rem 1rem;
+  }
+
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .support-content h1 {
+    font-size: 2rem;
+  }
+
+  .faq-section h2, .support-options h2 {
+    font-size: 1.5rem;
+  }
+
+  .support-cards {
+    grid-template-columns: 1fr;
+  }
+} 

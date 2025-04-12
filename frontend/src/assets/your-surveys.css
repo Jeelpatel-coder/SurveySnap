@@ -1,0 +1,336 @@
+.your-surveys-container {
+  width: 100vw;
+  padding: 3rem 2rem;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #f8fafc;
+  padding-top: 100px;
+}
+
+.your-surveys-container h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: -0.5rem;
+}
+
+.no-surveys {
+  text-align: center;
+  color: #000000;
+  font-size: 1.25rem;
+  margin: 4rem 0;
+  font-weight: 500;
+}
+
+.surveys-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.survey-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.survey-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.survey-card h3 {
+  margin: 0 0 1rem 0;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.survey-card p {
+  color: #000000;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.survey-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.survey-actions button {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.edit-btn {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+.view-btn {
+  background-color: #34c759;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #2da94a;
+  transform: translateY(-2px);
+}
+
+.share-btn {
+  background-color: #5856d6;
+  color: white;
+}
+
+.share-btn:hover {
+  background-color: #4845b3;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: #ff3b30;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+}
+
+.submit-button {
+  background-color: blueviolet;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: blueviolet;
+  transform: translateY(-2px);
+}
+
+.analytics-btn {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.analytics-btn:hover {
+  background-color: #7d3c98;
+  transform: translateY(-2px);
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  color: #000000;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* Share Modal Styles */
+.share-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.share-modal-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 550px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.share-modal-content h3 {
+  margin: 0 0 1.5rem 0;
+  color: #000000;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.share-link {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.share-link input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.share-link input:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.share-link button {
+  padding: 0.75rem 1.5rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.share-link button:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+.share-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.share-button {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.share-button.email {
+  background-color: #ea4335;
+}
+
+.share-button.email:hover {
+  background-color: #d33426;
+  transform: translateY(-2px);
+}
+
+.share-button.whatsapp {
+  background-color: #25d366;
+}
+
+.share-button.whatsapp:hover {
+  background-color: #22c55e;
+  transform: translateY(-2px);
+}
+
+.close-modal {
+  width: 100%;
+  padding: 1rem;
+  background-color: #f1f5f9;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #000000;
+  transition: all 0.2s ease;
+}
+
+.close-modal:hover {
+  background-color: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .your-surveys-container {
+    padding: 2rem 1rem;
+    padding-top: 90px;
+  }
+
+  .surveys-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .survey-actions {
+    flex-direction: column;
+  }
+
+  .survey-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .share-modal-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .your-surveys-container {
+    padding: 1.5rem 1rem;
+    padding-top: 120px;
+  }
+
+  .surveys-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .survey-actions {
+    flex-direction: column;
+  }
+
+  .survey-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .share-modal-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+} 
