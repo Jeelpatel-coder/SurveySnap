@@ -20,7 +20,7 @@ const SurveySubmission = () => {
   useEffect(() => {
     const fetchSurvey = async () => {
       try {
-        const response = await axios.get(`/api/surveys/${id}`);
+        const response = await axios.get(`https://surveysnap.onrender.com/api/surveys/${id}`);
         setSurvey(response.data);
         setLoading(false);
       } catch (error) {
