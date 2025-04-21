@@ -16,7 +16,7 @@ const Profile = () => {
   const fetchUserProfile = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5001/api/users/profile', {
+      const response = await axios.get('https://surveysnap.onrender.com/api/users/profile', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUser(response.data);
@@ -35,7 +35,7 @@ const Profile = () => {
   const handleSave = async () => {
     try {
       const token = localStorage.getItem('token');
-      await axios.put('http://localhost:5001/api/users/profile', editedUser, {
+      await axios.put('https://surveysnap.onrender.com/api/users/profile', editedUser, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setUser(editedUser);

@@ -19,7 +19,7 @@ const SurveyResponse = () => {
   const fetchSurvey = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:5001/api/surveys/${id}`, {
+      const response = await axios.get(`https://surveysnap.onrender.com/api/surveys/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSurvey(response.data);
@@ -67,7 +67,7 @@ const SurveyResponse = () => {
       }));
 
       await axios.post(
-        `http://localhost:5001/api/surveys/${id}/submit`,
+        `https://surveysnap.onrender.com/api/surveys/${id}/submit`,
         { answers: formattedAnswers },
         { headers: { Authorization: `Bearer ${token}` } }
       );

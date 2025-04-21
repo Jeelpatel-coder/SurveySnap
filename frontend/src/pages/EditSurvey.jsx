@@ -22,7 +22,7 @@ const EditSurvey = () => {
   const fetchSurvey = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get(`http://localhost:5001/api/surveys/${id}`, {
+      const response = await axios.get(`https://surveysnap.onrender.com/api/surveys/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSurvey(response.data);
@@ -115,7 +115,7 @@ const EditSurvey = () => {
     setSaving(true);
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:5001/api/surveys/${id}`, survey, {
+      await axios.put(`https://surveysnap.onrender.com/api/surveys/${id}`, survey, {
         headers: { Authorization: `Bearer ${token}` }
       });
       toast.success('Survey updated successfully!');

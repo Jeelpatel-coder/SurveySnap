@@ -23,7 +23,7 @@ const Login = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:5001/api/users/login', {
+      const response = await axios.post('https://surveysnap.onrender.com/api/users/login', {
         email: formData.email,
         password: formData.password
       });

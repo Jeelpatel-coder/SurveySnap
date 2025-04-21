@@ -16,7 +16,7 @@ const YourSurveys = () => {
   const fetchSurveys = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5001/api/surveys', {
+      const response = await axios.get('https://surveysnap.onrender.com/api/surveys', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSurveys(response.data);
@@ -31,7 +31,7 @@ const YourSurveys = () => {
     if (window.confirm('Are you sure you want to delete this survey?')) {
       try {
         const token = localStorage.getItem('token');
-        await axios.delete(`http://localhost:5001/api/surveys/${id}`, {
+        await axios.delete(`/api/surveys/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         toast.success('Survey deleted successfully');

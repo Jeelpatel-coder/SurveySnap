@@ -25,7 +25,7 @@ const SurveyRespond = () => {
 
   const fetchSurvey = async () => {
     try {
-      const response = await axios.get(`http://localhost:5001/api/surveys/${id}`);
+      const response = await axios.get(`https://surveysnap.onrender.com/api/surveys/${id}`);
       setSurvey(response.data);
       // Initialize answers object with empty values
       const initialAnswers = {};
@@ -82,7 +82,7 @@ const SurveyRespond = () => {
         return;
       }
 
-      await axios.post(`http://localhost:5001/api/surveys/${id}/submit`, {
+      await axios.post(`https://surveysnap.onrender.com/api/surveys/${id}/submit`, {
         answers: formattedAnswers
       }, {
         headers: { Authorization: `Bearer ${token}` }

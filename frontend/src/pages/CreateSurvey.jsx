@@ -100,7 +100,7 @@ const CreateSurvey = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:5001/api/surveys', survey, {
+      const response = await axios.post('https://surveysnap.onrender.com/api/surveys', survey, {
         headers: { Authorization: `Bearer ${token}` }
       });
       toast.success('Survey created successfully!');

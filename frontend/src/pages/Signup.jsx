@@ -66,7 +66,7 @@ const Signup = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:5001/api/users/signup', {
+      const response = await axios.post('https://surveysnap.onrender.com/api/users/signup', {
         username: formData.username,
         email: formData.email,
         phoneNumber: formData.phoneNumber,
